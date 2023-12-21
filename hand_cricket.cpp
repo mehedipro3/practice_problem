@@ -4,7 +4,7 @@
 #include<windows.h>
 using namespace std;
 
-void setcolorandbackground(int textc,int backg)             //with this we can set text color and background color
+void setcolorandbackground(int textc,int backg)               //with this we can set text color and background color
 {
     WORD color = (( backg & 0x0F )<<4) + ( textc & 0x0F );
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),color);
@@ -24,6 +24,7 @@ void title()       //prints title of the program
 
 
 }
+
 
 void mainmenu() //Function for printing Main menu options
 {
@@ -79,6 +80,8 @@ void about_us()
     cout << "\n\n\t\tPress '0' to go back to main menu....: ";
     setcolorandbackground(15,0);
 }
+
+
 
 bool toss(string player_name)                    //returns if the player has won the toss or not
 {
