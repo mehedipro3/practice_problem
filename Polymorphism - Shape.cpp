@@ -7,7 +7,7 @@ public:
     shape (double dm1,double dm2)
     {
         this-> dm1 = dm1;
-        this -> dm2 = dm2;
+        this-> dm2 = dm2;
     }
     virtual  double area()
     {
@@ -34,7 +34,8 @@ public:
 
 class rectangle : public shape
 {
-    // dm1,dm2.area()
+    
+// dm1,dm2.area()
 public:
     rectangle(double dm1,double dm2)
         :shape (dm1,dm2)
