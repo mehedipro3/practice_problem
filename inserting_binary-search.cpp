@@ -21,6 +21,7 @@ int main ()
         arr[n] = x;
     }
         // inserting..............
+    
     for(int i=1 ; i<=n ; i++)
     {
         int k = arr[i];
@@ -30,8 +31,9 @@ int main ()
             arr[j+1] = arr[j];
             j = j-1;
         }
-        arr[j+1]=k;
+        arr[ j+1 ] = k;
     }
+    
     for(int i=0 ; i<=n ; i++)
         cout << arr[i] << " " ;
     cout << endl;
@@ -60,6 +62,7 @@ int main ()
         }
 
     }
+    
     cout << zz << endl;
 
     return 0;
