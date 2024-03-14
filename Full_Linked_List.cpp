@@ -48,6 +48,11 @@ void insert_at_pos(Node *head,int pos,int v)
     for(int i=1; i<=pos-1; i++)
     {
         temp=temp ->next;
+        if(temp == NULL)
+        {
+            cout << endl << "Invalid Index" << endl << endl;
+            return;
+        }
         newNode->next = temp ->next;
         temp ->next= newNode;
         cout << endl << endl << " Inserted at position : " << pos << endl << endl;
@@ -63,13 +68,36 @@ void insert_at_head(Node* &head,int v)
 void delete_from_position(Node* head,int pos)
 {
     Node* temp= head;
-    for(int i=1;i<=pos-1;i++)
+    for(int i=1; i<=pos-1; i++)
     {
         temp = temp->next;
+        if(temp == NULL)
+        {
+            cout << endl << "Invalid Index" << endl << endl;
+            return;
+        }
+    }
+    if(temp -> NULL)
+    {
+        cout << endl << "Invalid Index" << endl << endl;
+        return;
     }
     Node* deleteNode = temp->next;
     temp -> next = temp->next->next;
     delete deleteNode;
+    cout << endl << "Delete position "<< pos << endl;
+}
+void delete_head(Node* &head)
+{
+    if(head == NULL)
+    {
+        cout << endl << "Head is not available right now" << endl << endl;
+        return;
+    }
+    Node* deleteNode = head;
+    head = head->next;
+    delete deleteNode;
+    cout << endl << "Delete head "<< endl;
 }
 int main()
 {
@@ -81,7 +109,8 @@ int main()
         cout << "Option 3: insert_at_any_position" << endl;
         cout << "Option 4: insert_at_head" << endl;
         cout << "Option 5: Delete_from_position" << endl;
-        cout << "Option 6: Terminate" << endl;
+        cout << "Option 6: Delete_head" << endl;
+        cout << "Option 7: Terminate" << endl;
         int op;
         cin >> op;
         if (op == 1)
@@ -124,9 +153,21 @@ int main()
             int  pos;
             cout << "Enter position: ";
             cin >> pos;
-            delete_from_position(head,pos);
+            if(pos==0)
+            {
+                delete_head(head);
+            }
+            else
+            {
+                delete_from_position(head,pos);
+            }
         }
-        else if (op == 6)
+        else if(op == 6)
+        {
+            delete_head(head);
+        }
+
+        else if (op == 7)
         {
             break;
         }
