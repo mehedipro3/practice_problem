@@ -41,8 +41,9 @@ void print_linked_list(Node *head)
     }
     cout << endl << endl;
 }
+
 void insert_at_pos(Node *head,int pos,int v)
-{
+ {
     Node *newNode = new Node(v);
     Node *temp = head;
     for(int i=1; i<=pos-1; i++)
@@ -63,7 +64,7 @@ void insert_at_head(Node* &head,int v)
     Node* newNode = new Node(v);
     newNode->next = head;
     head = newNode;
-    cout << endl << "Insert at head " << endl;
+    cout << endl << "Insert at head" << endl;
 }
 void delete_from_position(Node* head,int pos)
 {
