@@ -5,13 +5,11 @@ int main()
 {
     string name;
     int age;
-
     ofstream file;
     file.open("student_details.txt",ios::out|ios::app);
     for (int i=0; i<3; i++)
         
     {
-
         cout << "Enter your name :" ;
         getline(cin,name);
 
@@ -21,6 +19,7 @@ int main()
 
         file <<"Age:"<< age << endl;
         cin.ignore();
+        
     }
     
     file.close();
