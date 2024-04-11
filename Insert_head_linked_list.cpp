@@ -29,10 +29,12 @@ void insert_at_tail(Node *&head, int v)
         tmp = tmp->next;
     }
    
+    
     tmp->next = newNode;
     cout << endl
          << "Inserted at tail" << endl
          << endl;
+    
 }
 void print_linked_list(Node *head)
 {
@@ -76,11 +78,13 @@ int main()
     Node *head = NULL;
     while (true)
     {
+        
         cout << "Option 1: Insert at Tail" << endl;
         cout << "Option 2: Print Linked List" << endl;
         cout << "Option 3: Insert at any Position" << endl;
         cout << "Option 4: Insert at Head" << endl;
         cout << "Option 5: Terminate" << endl;
+        
         int op;
         cin >> op;
         if (op == 1)
